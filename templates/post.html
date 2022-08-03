@@ -1,0 +1,21 @@
+{%extends 'index.html'%}
+
+{%load static%}
+
+{%block titulo%}
+{{detallepost.titulo}}
+{%endblock%}
+
+{%block fondo%} 
+{{detallepost.imagen}}
+{%endblock%}
+
+{%block blogger%} 
+<h1>{{detallepost.titulo}}</h1>
+<p>{{detallepost.descripcion}}</p>
+<p>Escrito por: {{detallepost.autor}}</p>
+{%endblock%}
+
+{%block contenido%}
+{{detallepost.contenido | safe}}
+{%endblock%}
